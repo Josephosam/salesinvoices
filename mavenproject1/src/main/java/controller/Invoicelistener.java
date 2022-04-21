@@ -122,7 +122,9 @@ import java.util.List;
                     Date invoiceDate =  InvoiceFrame.joo22.parse(str2);
                     InvoiceHeader header = new InvoiceHeader(code, str3, invoiceDate);
                     invoiceHeaders.add(header);
+                 System.out.println(" invoce num "+"\t"+ str1 +" invoice date "+"\t" +str2+ " customer name "+ str3);
                 }
+               
                 josframe.setInvoicesArray(invoiceHeaders);
                 
                
@@ -145,7 +147,8 @@ import java.util.List;
                         InvoiceHeader inv = josframe.getInvObj(invCode);
                         LineInvoice linej = new LineInvoice(s2, price, count, inv);
                         inv.getLines().add(linej);
-                    }
+                        System.out.println(" invcode "+ s1  +"\t" + " count "+ s4+"\t"+" price "+ s2+"\t"+" total "+ s3);
+                }
                
             }
             InvoiceHeaderTable htj = new InvoiceHeaderTable(invoiceHeaders);
